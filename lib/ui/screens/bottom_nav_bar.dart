@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taskkmanager/ui/screens/add_new_task_screen.dart';
 import 'package:taskkmanager/ui/screens/cancelled_task_screen.dart';
 import 'package:taskkmanager/ui/screens/completed_task_screen.dart';
 import 'package:taskkmanager/ui/screens/inprogress_task_screen.dart';
@@ -15,7 +16,6 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
-
   int _selectedScreen = 0;
   final List<Widget> _screens = const [
     NewTaskScreen(),
@@ -31,21 +31,30 @@ class _BottomNavBarState extends State<BottomNavBar> {
         child: Column(
           children: [
             UserProfileWidget(),
-            
             Expanded(child: _screens[_selectedScreen]),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const AddNewTaskScreen(),
+            ),
+          );
+        },
+        backgroundColor: Colors.green,
+        child: const Icon(Icons.add),
       ),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.green,
         unselectedItemColor: Colors.grey,
         backgroundColor: Colors.white,
         showUnselectedLabels: true,
-        onTap: (index){
+        onTap: (index) {
           _selectedScreen = index;
-          setState(() {
-
-          });
+          setState(() {});
         },
         elevation: 5,
         currentIndex: _selectedScreen,
@@ -63,5 +72,3 @@ class _BottomNavBarState extends State<BottomNavBar> {
     );
   }
 }
-
-
