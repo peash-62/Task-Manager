@@ -8,11 +8,12 @@ class TaskListItem extends StatelessWidget {
     required this.date,
     required this.onEditPress,
     required this.onDeletePress,
-    required this.type,
+    required this.type, this.Color,
   });
 
   final String subject, description, date, type;
   final VoidCallback onEditPress, onDeletePress;
+  final Color;
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +47,7 @@ class TaskListItem extends StatelessWidget {
               children: [
                 Chip(
                   label: Text(type),
-                  backgroundColor: Colors.blueAccent,
+                  backgroundColor:Color,
                 ),
                 const Spacer(),
                 IconButton(
