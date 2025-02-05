@@ -56,6 +56,7 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
                 description: 'description asedrfgj jkmj ghut nmk',
                 onDeletePress: () {},
                 onEditPress: () {},
+                Color: Colors.blueAccent,
               );
             }),
           ),
