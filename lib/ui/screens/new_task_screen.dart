@@ -51,7 +51,7 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
                 itemBuilder: (context, index) {
               return TaskListItem(
                 type: 'new',
-                date: '24-02[2024',
+                date: '24-02-2024',
                 subject: 'Title will be here',
                 description: 'description asedrfgj jkmj ghut nmk',
                 onDeletePress: () {},
