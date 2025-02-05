@@ -81,6 +81,7 @@ class _SignUPScreenState extends State<SignUPScreen> {
                         child: const Text(
                           'Sign In',
                           style: TextStyle(color: Colors.blue),
+
                         ),
                       ),
                     ],
